@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contest Success</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(94, 243, 89);
+    
+  }
+  
+  </style>
+</head>
+<body>
+  <h1>Congratulations!</h1>
+  <p>You have successfully completed the test.</p>
+  <!-- JavaScript to display time taken from query parameter -->
+  <script>
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const timeTaken = urlParams.get('time');
+    // // const score = urlParams.get('score');
+    // // const totalques = urlParams.get('totalques');
+    // document.write(`<p>Time taken: ${timeTaken} seconds</p>`);
+
+
+
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    // Retrieve the time taken from the query parameter
+    const timeTaken = getQueryParam('timeTaken');
+    
+    // Additional parameters
+
+    const param1 = getQueryParam('param1');
+    const param2 = getQueryParam('param2');
+    const param3 = getQueryParam('param3');
+    const param4 = getQueryParam('param4');
+    const param5 = getQueryParam('param5');
+
+
+    // console.log('URL:', window.location.href);
+    // console.log('param1:', param1);
+    // console.log('param5:', param5);
+    // Display time taken and additional parameters
+    document.write(`
+    <p>Time taken: ${timeTaken} seconds</p>
+    <h2>Your Choosen Answers:</h2>
+    <p>Your answer 1 is: ${param1}</p>
+    <p>Your answer 2 is: ${param2}</p>
+    <p>Your answer 3 is: ${param3}</p>
+    <p>Your answer 4 is: ${param4}</p>
+    <p>Your answer 5 is: ${param5}</p>
+    `);
+
+  
+  </script>
+</body>
+</html>
